@@ -1,0 +1,18 @@
+Install avrdude, if not already installed
+
+From the root of the repository, issue the following to build the firmware:
+$ make redox:<layout_name>
+
+If everything looks good and a .hex file was created, connect the TRRS cable to both halves of the board, connect the USB cable to the left half, plug it into the computer, and issue:
+
+$ sudo make redox:<layout_name>:avrdude-split-left
+
+Follow the instructions on screen.
+
+If this was successful, unplug the board, disconnect the TRRS cable, and move the USB cable to the right half. Plug it in, and run:
+
+$ sudo make redox:<layout_name>:avrdude-split-right
+
+Follow the instructions on screen
+
+Disconnect the USB cable. Connect the TRRS cable to both boards, connect the USB cable to the left half. Plug other end of USB cable into the computer, and test the keyboard. That's it!
