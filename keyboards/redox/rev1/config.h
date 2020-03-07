@@ -45,8 +45,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* number of backlight levels */
 // #define BACKLIGHT_LEVELS 3
 
+/* Mouse control settings */
+#define MOUSEKEY_INTERVAL       20
+#define MOUSEKEY_DELAY          0
+#define MOUSEKEY_TIME_TO_MAX    60
+#define MOUSEKEY_MAX_SPEED      7
+#define MOUSEKEY_WHEEL_DELAY 0
+
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 15
 
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D0
@@ -62,6 +69,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 14    // Number of LEDs
 
 #define RGBLIGHT_SPLIT   // sync LEDs between RIGHT and LEFT hand
+
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+
+/* Number of taps before triggering toggle behavior */
+#define TAPPING_TOGGLE  1
+/* Delay in milliseconds for a dual-action key to switch from tap to hold behavior */
+#define TAPPING_TERM 150
+
+/* this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.) */
+#define IGNORE_MOD_TAP_INTERRUPT
+
+/* fix space cadet rollover issue */
+#define DISABLE_SPACE_CADET_ROLLOVER
+
+/*
+ * Force NKRO
+ *
+ * Force NKRO (nKey Rollover) to be enabled by default, regardless of the saved
+ * state in the bootmagic EEPROM settings. (Note that NKRO must be enabled in the
+ * makefile for this to work.)
+ *
+ * If forced on, NKRO can be disabled via magic key (default = LShift+RShift+N)
+ * until the next keyboard reset.
+ *
+ * NKRO may prevent your keystrokes from being detected in the BIOS, but it is
+ * fully operational during normal computer usage.
+ *
+ * For a less heavy-handed approach, enable NKRO via magic key (LShift+RShift+N)
+ * or via bootmagic (hold SPACE+N while plugging in the keyboard). Once set by
+ * bootmagic, NKRO mode will always be enabled until it is toggled again during a
+ * power-up.
+ *
+ */
+/*#define FORCE_NKRO*/
 
 /*
  * Feature disable options
