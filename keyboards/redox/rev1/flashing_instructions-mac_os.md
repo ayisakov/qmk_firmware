@@ -4,6 +4,8 @@
 
 For the latest instructions, see [Setting Up Your QMK Environment](https://docs.qmk.fm/#/newbs_getting_started?id=setting-up-your-qmk-environment), [Building Your First Firmware](https://docs.qmk.fm/#/newbs_building_firmware), and [Flashing Firmware](https://docs.qmk.fm/#/newbs_flashing).
 
+Note: if cloning own fork of qmk_firmware, change the remote url to use SSH to be able to push and pull later.
+
 ### TL;DR (with a working qmk environment)
 
 `qmk compile -kb <my_keyboard> -km <my_keymap>`
