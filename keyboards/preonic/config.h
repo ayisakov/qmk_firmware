@@ -55,7 +55,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_LEVELS 3
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 15
+
+/* Mouse control settings */
+#define MOUSEKEY_INTERVAL       20
+#define MOUSEKEY_DELAY          0
+#define MOUSEKEY_TIME_TO_MAX    60
+#define MOUSEKEY_MAX_SPEED      7
+#define MOUSEKEY_WHEEL_DELAY 0
+
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+
+/* Number of taps before triggering toggle behavior */
+#define TAPPING_TOGGLE  1
+/* Delay in milliseconds for a dual-action key to switch from tap to hold behavior */
+#define TAPPING_TERM 200
+
+/* this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.) */
+#define IGNORE_MOD_TAP_INTERRUPT
+
+/* fix space cadet rollover issue */
+#define DISABLE_SPACE_CADET_ROLLOVER
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
